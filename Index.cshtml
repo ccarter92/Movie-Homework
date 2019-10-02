@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+<section class="text-center">
+    <section>
+    <h1 class="display-1">Movie Classics</h1>
+    </section>
+    <section class="row">
+        <section class="col align align-self-start">
+            <aside>
+            Friday
+            <img style="height:15rem; width:10rem;" src="https://images-na.ssl-images-amazon.com/images/I/81C2FAaVFFL._RI_.jpg" alt="Alternate Text" />
+            <p>
+                Friday Is One of my favorite movies, me and my kids enjoy watching it together.
+            </p>
+                </aside>
+        </section>
+        <section class=" col align align-self-center">
+            <aside>
+            Next Friday
+            <img style="height:15rem; width:13rem;" src="https://target.scene7.com/is/image/Target/GUEST_e6f485d4-8e3e-4839-b7d1-9c5a28f2f07f?wid=488&hei=488&fmt=pjpeg" alt="Alternate Text" />
+            <p>
+                This is defintely a classic, I find it funny everytime I watch it as if its my first time seeing it.
+            </p>
+                </aside>
+        </section>
+        <section class=" col align-self-end">
+            <aside>
+            Friday After Next
+            <img style="height:15rem; width:10rem;" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Friday_After_Next_Poster.jpg/220px-Friday_After_Next_Poster.jpg" alt="Alternate Text" />
+            <p>
+                This Is my Top Favorite out of the three, It give me holiday feel, the best time of the year to see family, and share the love for one another.
+            </p>
+                </aside>
+        </section>
+    </section>
+</section>
+
+    <section>
+    @foreach(string x in Model.MyMovies)
+    {
+        <aside class="col-lg-3 col-md3,col-12";>
+        <p style="background-color:aqua;">@x</p>
+            </aside>
+    }
+        </section>
+
+    }
